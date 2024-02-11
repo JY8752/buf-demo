@@ -9,6 +9,7 @@ enum Condition {
   CONDITION_UNSPECIFIED = 0;
   CONDITION_SUNNY = 1;
   CONDITION_RAINY = 2;
+  CONDITION_SNOW = 3;
 }
 
 // リクエストメッセージは<rpc名>Requestにする
