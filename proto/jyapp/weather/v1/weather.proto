@@ -1,6 +1,5 @@
 syntax = "proto3";
 
-// パッケージ名はディレクトリと一致させる必要がある
 package jyapp.weather.v1;
 
 enum Condition {
