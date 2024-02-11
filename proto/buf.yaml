@@ -1,5 +1,5 @@
 version: v1
-name: jyapp/weather/v1
+name: buf.build/jyapp/weather
 breaking:
   use:
     - FILE
