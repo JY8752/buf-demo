@@ -1,0 +1,26 @@
+syntax = "proto3";
+
+package jyapp.weather.v1;
+
+enum Condition {
+  // enumの0は<enum名>_UNSPECIFIEDにする
+  // enumのフィールド名はprefixにenum名をつける
+  CONDITION_UNSPECIFIED = 0;
+  CONDITION_SUNNY = 1;
+  CONDITION_RAINY = 2;
+}
+
+// リクエストメッセージは<rpc名>Requestにする
+message GetWeatherRequest {
+  float latitude = 1;
+  float longitude = 2;
+}
+
+message GetWeatherResponse {
+  float temperature = 1;
+  Condition conditions = 2;
+}
+
+service WeatherService {
+  rpc GetWeather(GetWeatherRequest) returns (GetWeatherResponse);
+}

@@ -1,0 +1,18 @@
+version: v1
+# マネージドモードを有効
+managed:
+  enabled: true
+  go_package_prefix:
+    default: github.com/JY8752/buf-demo/example/gen
+plugins:
+  # protoc-gen-goプラグイン
+  # - plugin: go
+  #   out: gen/go
+  #   opt: paths=source_relative
+  # リモートプラグインを使用
+  - plugin: buf.build/protocolbuffers/go:v1.31.0
+    out: gen/go
+    opt: paths=source_relative
+  - plugin: buf.build/grpc/go:v1.3.0
+    out: gen/go
+    opt: paths=source_relative

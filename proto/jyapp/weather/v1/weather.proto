@@ -1,7 +1,7 @@
 syntax = "proto3";
 
 // パッケージ名はディレクトリと一致させる必要がある
-package junichiy.weather.v1;
+package jyapp.weather.v1;
 
 enum Condition {
   // enumの0は<enum名>_UNSPECIFIEDにする
@@ -10,12 +10,6 @@ enum Condition {
   CONDITION_SUNNY = 1;
   CONDITION_RAINY = 2;
 }
-
-
-
-
-
-
 
 // リクエストメッセージは<rpc名>Requestにする
 message GetWeatherRequest {
